@@ -17,8 +17,6 @@ public class MainActivity extends AppCompatActivity  {
     EditText editName,editSurname,editBatch,editTextId;
     Button btnAddData,btnviewAll,btnviewUpdate,btnDelete;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +49,8 @@ public class MainActivity extends AppCompatActivity  {
                           Toast.makeText(MainActivity.this,"Data Deleted",Toast.LENGTH_SHORT).show();
                       else
                           Toast.makeText(MainActivity.this,"Data not Deleted",Toast.LENGTH_SHORT).show();
+                      editName.setText("");editTextId.setText("");
+                      editSurname.setText("");editBatch.setText("");
                   }
               }
       );
@@ -69,6 +69,8 @@ public class MainActivity extends AppCompatActivity  {
                         Toast.makeText(MainActivity.this,"Data Updated",Toast.LENGTH_SHORT).show();
                     else
                         Toast.makeText(MainActivity.this,"Data not Updated",Toast.LENGTH_SHORT).show();
+                    editName.setText("");editTextId.setText("");
+                    editSurname.setText("");editBatch.setText("");
                 }
             }
     );
@@ -84,6 +86,8 @@ public class MainActivity extends AppCompatActivity  {
                 Toast.makeText(MainActivity.this,"Data inserted",Toast.LENGTH_SHORT).show();
             else
                 Toast.makeText(MainActivity.this,"Data not inserted",Toast.LENGTH_SHORT).show();
+            editName.setText("");editTextId.setText("");
+            editSurname.setText("");editBatch.setText("");
             }
         });
     }
@@ -109,6 +113,8 @@ public class MainActivity extends AppCompatActivity  {
                           }
                           showMessage("data",buffer.toString());
                       }
+                        editName.setText("");editTextId.setText("");
+                        editSurname.setText("");editBatch.setText("");
                     }
                 }
         );
